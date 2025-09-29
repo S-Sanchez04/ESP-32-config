@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: ESP32 WiFi Config API
+  description: API para configurar dinámicamente la red WiFi en un ESP32 mediante endpoints HTTP.
+  version: 1.0.0
+servers:
+  - url: http://{esp32_ip}
+    description: Dirección IP local del ESP32
+    variables:
+      esp32_ip:
+        default: 192.168.4.1
+
+paths:
+  /wifi-config:
+    post:
+      summary: Configurar credenciales WiFi
+      description: Permite enviar el SSID y la contraseña de la red WiFi para que el ESP32 las guarde y se reinicie en modo cliente (STA).
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                ssid:
+                  type: string
+                  example: MiRedWiFi
+                password:
+                  type: string
+                  example: supersecreto123
+              required:
+                - ssid
+                - password
+      responses:
+        "200":
+          description: Credenciales guardadas correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  message:
+                    type: string
+                    example: WiFi guardado, reiniciando...
+        "400":
+          description: Faltan parámetros
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        "405":
+          description: Método no permitido
+
+  /reset-config:
+    post:
+      summary: Restablecer configuración WiFi
+      description: Borra las credenciales guardadas y reinicia el ESP32 en modo AP.
+      responses:
+        "200":
+          description: Configuración eliminada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  message:
+                    type: string
+                    example: Configuración borrada
