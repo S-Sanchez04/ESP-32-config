@@ -96,7 +96,8 @@ Borra credenciales guardadas y reinicia en modo AP.
 │── diagrams/
 │   ├── uml-sequence.png
 │   └── arquitectura.png
-│── postman_collection.json
+│── docs/
+│   ├── CollectionEsp.json
 ```
 
 ---
