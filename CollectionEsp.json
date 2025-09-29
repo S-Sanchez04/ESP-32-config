@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2b71ff04-9453-4221-886d-90dcc99b5b2a",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35029272"
+	},
+	"item": [
+		{
+			"name": "Configure Wi-Fi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ssid",
+							"value": "{{ssid}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{esp32_host}}/wifi-config",
+					"protocol": "http",
+					"host": [
+						"{{esp32_host}}"
+					],
+					"path": [
+						"wifi-config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Config",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{ip-esp32}}/reset-config",
+					"protocol": "http",
+					"host": [
+						"{{ip-esp32}}"
+					],
+					"path": [
+						"reset-config"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "esp32_host",
+			"value": ""
+		},
+		{
+			"key": "ssid",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
+		},
+		{
+			"key": "ip-esp32",
+			"value": ""
+		}
+	]
+}
