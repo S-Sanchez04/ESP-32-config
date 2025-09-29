@@ -103,15 +103,7 @@ Borra credenciales guardadas y reinicia en modo AP.
 
 ## 📖 Diagramas
 
-* **Diagrama de secuencia (UML):**
-
-  * Usuario → ESP32 (AP) → Envío de credenciales → Guardar en NVS → Reinicio en modo STA → Conexión a router.
-* **Diagrama de arquitectura:**
-
-  * ESP32 ↔ Router WiFi ↔ Cliente HTTP (navegador / Postman).
-
-*(Se recomienda generar en draw.io, Lucidchart o PlantUML y subir imágenes a `/diagrams`)*
-
+* **Diagramas en la carpeta /diagrams**
 ---
 
 ## 🚀 Cómo probar el sistema
