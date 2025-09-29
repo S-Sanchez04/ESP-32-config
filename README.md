@@ -6,7 +6,7 @@ El usuario final puede conectarse al ESP32 en **modo AP** y configurar las crede
 
 ---
 
-## ✨ Características principales
+##  Características principales
 
 * Inicio en **modo Access Point (AP)** si no existen credenciales guardadas.
 * Portal web simple para configurar SSID y contraseña.
@@ -17,21 +17,21 @@ El usuario final puede conectarse al ESP32 en **modo AP** y configurar las crede
 
 ---
 
-## 📋 Requisitos de la tarea
+##  Requisitos de la tarea
 
-✔ ESP32 inicia en modo AP si no tiene credenciales.
-✔ Interfaz web para ingresar SSID y contraseña.
-✔ Uso de **NVS** (Preferences.h) para memoria no volátil.
-✔ Reconexión automática.
-✔ Documentación técnica (diagramas, código, OpenAPI).
-✔ README estilo wiki con instrucciones.
-✔ Endpoints documentados y colección Postman.
-✔ Diagramas UML de secuencia.
-✔ Botón físico para reset de configuración.
+- ESP32 inicia en modo AP si no tiene credenciales.
+- Interfaz web para ingresar SSID y contraseña.
+- Uso de **NVS** (Preferences.h) para memoria no volátil.
+- Reconexión automática.
+- Documentación técnica (diagramas, código, OpenAPI).
+- README estilo wiki con instrucciones.
+- Endpoints documentados y colección Postman.
+- Diagramas UML de secuencia.
+- Botón físico para reset de configuración.
 
 ---
 
-## ⚙️ Arquitectura del sistema
+##  Arquitectura del sistema
 
 1. **Modo AP**
 
@@ -49,7 +49,7 @@ El usuario final puede conectarse al ESP32 en **modo AP** y configurar las crede
 
 ---
 
-## 📡 Endpoints API
+##  Endpoints API
 
 ### `POST /wifi-config`
 
@@ -86,7 +86,7 @@ Borra credenciales guardadas y reinicia en modo AP.
 
 ---
 
-## 📂 Estructura del repositorio
+##  Estructura del repositorio
 
 ```
 /ESP32-WiFi-Config
@@ -101,12 +101,12 @@ Borra credenciales guardadas y reinicia en modo AP.
 
 ---
 
-## 📖 Diagramas
+##  Diagramas
 
 * **Diagramas en la carpeta /diagrams**
 ---
 
-## 🚀 Cómo probar el sistema
+##  Cómo probar el sistema
 
 1. Conectar a la red `Chucho_AP` (clave `12345678`).
 2. Abrir navegador en `http://192.168.4.1/`.
@@ -116,7 +116,7 @@ Borra credenciales guardadas y reinicia en modo AP.
 
 ---
 
-## 🛠 Tecnologías usadas
+##  Tecnologías usadas
 
 * ESP32 + Arduino Core
 * Biblioteca `WiFi.h`
@@ -126,7 +126,7 @@ Borra credenciales guardadas y reinicia en modo AP.
 
 ---
 
-## 📑 Autores y créditos
+##  Autores y créditos
 * Autores:
   * Nicolas Almonacid
   * Esteban Bernal
