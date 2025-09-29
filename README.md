@@ -1,6 +1,6 @@
-# 📡 Proyecto IoT: Configuración dinámica de WiFi en ESP32
+# Configuración dinámica de WiFi en ESP32
 
-Este proyecto implementa una **solución IoT con ESP32** que permite configurar dinámicamente la red WiFi **sin necesidad de reprogramar el dispositivo**.
+Los contenidos de este repositorio sirven para implementar una **solución IoT con ESP32** que permite configurar dinámicamente la red WiFi **sin necesidad de reprogramar el dispositivo**.
 
 El usuario final puede conectarse al ESP32 en **modo AP** y configurar las credenciales de su red WiFi mediante una interfaz HTTP local.
 
@@ -13,8 +13,7 @@ El usuario final puede conectarse al ESP32 en **modo AP** y configurar las crede
 * Almacena credenciales en **NVS (flash)** de forma persistente.
 * Reconexión automática a la red WiFi configurada.
 * Endpoints HTTP documentados (OpenAPI).
-* Botón físico de reset para borrar configuración.
-* Código comentado y organizado en C++ (Arduino framework).
+* Código comentado y organizado en el Arduino framework.
 
 ---
 
@@ -136,7 +135,10 @@ Borra credenciales guardadas y reinicia en modo AP.
 ---
 
 ## 📑 Autores y créditos
-
+* Autores:
+  * Nicolas Almonacid
+  * Esteban Bernal
+  * Santiago Sanchez
 * Proyecto desarrollado en el marco de la asignatura de IoT / Ingeniería Informática.
 * Documentación generada con ayuda de **inteligencia artificial (ChatGPT)**.
 
